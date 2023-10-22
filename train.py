@@ -31,10 +31,10 @@ X = imp.transform(X)
 
 
 # Linear model
-clf = LogisticRegression()
+# clf = LogisticRegression()
 
 # Quadratic  model
-# clf = QuadraticDiscriminantAnalysis()
+clf = QuadraticDiscriminantAnalysis()
 
 yhat = cross_val_predict(clf, X, y, cv=5)
 
