@@ -14,8 +14,8 @@ jobs:
           dvc repro
 
           git fetch --prune
-          echo "## Current metrices" >> report.md
-          dvc metrics show --md > report.md
+          echo "## Current metrices" > report.md
+          dvc metrics show --md >> report.md
           
           echo "## Difference in the metrices" >> report.md
           dvc metrics diff --md master >> report.md
